@@ -144,12 +144,19 @@ function transformBack(link)
 
 function updateDownloadLinks()
 {
+	var features = featureList();
+	if (features.length) {
+		$('.js-options').text('-s ' + features);
+	} else {
+		$('.js-options').text('');
+	}
+	
 	$('.download-link').each(function() {
 		var os = $(this).data('os'),
 			arch = $(this).data('arch'),
 			url = "/download/build?os="+encodeURIComponent(os)
 					+"&arch="+encodeURIComponent(arch)
-					+"&features="+encodeURIComponent(featureList());
+					+"&features="+encodeURIComponent(features);
 		$(this).attr('href', url);
 	});
 }
