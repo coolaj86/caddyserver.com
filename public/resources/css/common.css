@@ -359,6 +359,13 @@ mark.block {
 	-webkit-animation: blink 1s step-start 0s infinite;
 	animation: blink 1s step-start 0s infinite;
 }
+.noselect {
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	-o-user-select: none; /* Opera? */
+	user-select: none; /* All */
+}
 .block-cursor {
 	-webkit-animation: blink 2s step-start 0s infinite;
 	animation: blink 2s step-start 0s infinite;
